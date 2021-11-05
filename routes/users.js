@@ -1,3 +1,4 @@
+const { query } = require('express');
 var express = require('express');
 var router = express.Router();
 var countries = require('../data/enums/countries_of_origin')
@@ -6,7 +7,8 @@ var baby_name = require('../helpers/baby_name')
 
 /* GET random boy name by country of origin */
 router.get('/random_boy', function (req, res, next) {
-  var boy = baby_name.get_random_boy_name(countries.American)
+  var country = req.query['country']
+  var boy = baby_name.get_random_boy_name(country)
   res.send(boy);
 });
 
@@ -30,7 +32,5 @@ router.get('/genders', function (req, res, next) {
 router.get('/', function (req, res, next) {
   res.send("Welcome to Random baby names by country of origin and gender.");
 });
-
-
 
 module.exports = router;
