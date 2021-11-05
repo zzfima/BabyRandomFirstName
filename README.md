@@ -1,2 +1,2 @@
 # BabyRandomFirstName
-Baby random first name by country and sex
+Baby random first name by country and gender
