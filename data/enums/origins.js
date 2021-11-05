@@ -1,4 +1,4 @@
-const countries_of_origin = {
+const origins = {
     African: "African",
     African_American: "African American",
     American: "American",
@@ -52,4 +52,4 @@ const countries_of_origin = {
     Yiddish: "Yiddish"
 }
 
-module.exports = countries_of_origin
+module.exports = origins

@@ -1,7 +1,7 @@
 const { query } = require('express');
 var express = require('express');
 var router = express.Router();
-var countries = require('../data/enums/countries_of_origin')
+var origins = require('../data/enums/origins')
 var genders = require('../data/enums/genders')
 var baby_name = require('../helpers/baby_name')
 
@@ -21,7 +21,7 @@ router.get('/random_girl', function (req, res, next) {
 
 /* GET list of countries */
 router.get('/countries', function (req, res, next) {
-  res.send(Object.values(countries));
+  res.send(Object.values(origins));
 });
 
 /* GET list of genders */
