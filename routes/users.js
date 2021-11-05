@@ -14,7 +14,8 @@ router.get('/random_boy', function (req, res, next) {
 
 /* GET random girl name by country of origin */
 router.get('/random_girl', function (req, res, next) {
-  var girl = baby_name.get_random_girl_name(countries.American)
+  var country = req.query['country']
+  var girl = baby_name.get_random_girl_name(country)
   res.send(girl);
 });
 
